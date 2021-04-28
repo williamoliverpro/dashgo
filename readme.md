@@ -7,7 +7,7 @@
 Dashgo
 </h1>
 
-<p align="center">A dashboard, with the purpose of helping in the collection of recyclables</p>
+<p align="center">A dashboard made with Next.js and Chakra UI, in order to explore and manage users with graphics and responsive layout.</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -36,10 +36,12 @@ Dashgo
 
 ## Features
 [//]: # (Add the features of your project here:)
-This app features all the latest tools and practices in mobile development!
+This app features all the latest tools and practices in web development!
 
 - ⚛️ **Next.js** — Next.js is a React framework that allows SSR and the SSG.
-- 💹 **Typescript** — TypeScript is a superset of JavaScript that adds typing in the language.
+- ⚡ **Chakra UI** — Provides a set of accessible, reusable, and composable React components that make it easy to create websites and apps.
+- ⚛️ **React Query** — Is a library that gives ReactJS the state management ability for any kind of asynchronous data.
+- ✔️ **Yup** — Is a JavaScript schema builder for value parsing and validation.
 
 ## Getting started
 

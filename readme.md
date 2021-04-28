@@ -1,7 +1,7 @@
 
 <h1 align="center">
 <br>
-  <img src="web/src/assets/logo.svg" alt="Logo Ecoleta" width="120">
+  <img src="web/src/assets/logo.svg" alt="Logo Dashgo" width="120">
 <br>
 <br>
 Dashgo

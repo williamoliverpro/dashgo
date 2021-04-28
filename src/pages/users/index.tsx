@@ -48,7 +48,7 @@ export default function UserList({ users }) {
         <Box flex="1" borderRadius={8} bg="gray.800" p="8">
           <Flex mb="8" justify="space-between" align="center">
             <Heading size="lg" fontWeight="normal">
-              Usuários
+              Users
               
               { !isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" /> }
               </Heading>
@@ -60,7 +60,7 @@ export default function UserList({ users }) {
                 colorScheme="pink"
                 leftIcon={<Icon as={RiAddLine} fontSize="20" />}
               >
-                Criar novo
+                Create new
             </Button>
             </NextLink>
           </Flex>
@@ -71,7 +71,7 @@ export default function UserList({ users }) {
             </Flex>
           ) : error ? (
             <Flex justify="center">
-              <Text>Falha ao obter dados dos usuários.</Text>
+              <Text>Failed to get data from users.</Text>
             </Flex>
           ) : (
             <>
@@ -81,8 +81,8 @@ export default function UserList({ users }) {
                     <Th px={["4", "4", "6"]} color="gray.300" width="8">
                       <Checkbox colorScheme="pink" />
                     </Th>
-                    <Th>Usuários</Th>
-                    {isWideVersion && <Th>Data de cadastro</Th>}
+                    <Th>Users</Th>
+                    {isWideVersion && <Th>Registration date</Th>}
                   </Tr>
                 </Thead>
                 <Tbody>
@@ -122,12 +122,12 @@ export default function UserList({ users }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const { users, totalCount } = await getUsers(1)
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const { users, totalCount } = await getUsers(1)
 
-  return {
-    props: {
-      users
-    }
-  }
-}
+//   return {
+//     props: {
+//       users
+//     }
+//   }
+// }

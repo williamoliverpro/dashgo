@@ -20,12 +20,12 @@ type CreateUserFormData = {
 }
 
 const createUserFormSchema = yup.object().shape({
-  name: yup.string().required('Nome obrigatório'),
-  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
-  password: yup.string().required('Senha obrigatório').min(6, 'No mínimo 5 caracteres'),
+  name: yup.string().required('Name required'),
+  email: yup.string().required('Email required').email('Invalid email'),
+  password: yup.string().required('Password required').min(6, 'At least 5 characters'),
   password_confirmation: yup.string().oneOf([
     null, yup.ref('password')
-  ], 'As senhas precisam ser iguais')
+  ], 'Passwords must be the same')
 })
 
 export default function CreateUser() {
@@ -71,7 +71,7 @@ export default function CreateUser() {
           p={["6", "8"]}
           onSubmit={handleSubmit(handleCreateUser)}
         >
-          <Heading size="lg" fontWeight="normal">Criar usuário</Heading>
+          <Heading size="lg" fontWeight="normal">Create user</Heading>
 
           <Divider my="6" borderColor="gray.700" />
 
@@ -80,14 +80,14 @@ export default function CreateUser() {
               <Input
                 name="name"
                 type="text"
-                label="Nome completo"
+                label="Full name"
                 error={errors.name}
                 {...register("name")}
               />
               <Input
                 name="email"
                 type="email"
-                label="E-mail"
+                label="Email"
                 error={errors.email}
                 {...register("email")}
               />
@@ -97,14 +97,14 @@ export default function CreateUser() {
               <Input
                 name="password"
                 type="password"
-                label="Senha"
+                label="Password"
                 error={errors.password}
                 {...register("password")}
               />
               <Input
                 name="password_confirmation"
                 type="password"
-                label="Confirmação da senha"
+                label="Password confirmation"
                 error={errors.password_confirmation}
                 {...register("password_confirmation")}
               />
@@ -114,14 +114,14 @@ export default function CreateUser() {
           <Flex mt="8" justify="flex-end">
             <HStack spacing="4">
               <Link href="/users" passHref>
-                <Button as="a" colorScheme="whiteAlpha">Cancelar</Button>
+                <Button as="a" colorScheme="whiteAlpha">Cancel</Button>
               </Link>
               <Button
                 type="submit"
                 colorScheme="pink"
                 isLoading={formState.isSubmitting}
               >
-                Salvar
+                Save
               </Button>
             </HStack>
           </Flex>

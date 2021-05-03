@@ -46,7 +46,7 @@ This app features all the latest tools and practices in web development!
 ## Getting started
 
 1. Clone this repo using ```git clone https://github.com/williamoliverpro/dashgo```<br/>
-2. Move yourself to the appropriate directory: cd moveit<br/>
+2. Move yourself to the appropriate directory: cd dashgo<br/>
 3. Run ```npm install``` or ```yarn``` to install dependencies
 4. Run ```npm run dev``` or ```yarn dev``` to start the application
 
